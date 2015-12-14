@@ -1,6 +1,15 @@
 var React = require('react'),
     ReactDOM = require('react-dom'),
-    App = React.createFactory(require('./App.jsx'));
+    App=require('./App.jsx');
 
-ReactDOM.render(App({items:['金酒','苦艾酒','汤力水']}), document.getElementById('app'));   
+var app=React.createElement(App,{items:['金酒','苦艾酒','汤力水']})
+ReactDOM.render(app, document.getElementById('app'));
 
+// 这种写法也行
+// var React = require('react'),
+//     ReactDOM = require('react-dom'),
+//     App = React.createFactory(require('./App.jsx'));
+    
+
+// var app=App({items:['金酒','苦艾酒','汤力水']});
+// ReactDOM.render(app, document.getElementById('app'));   
